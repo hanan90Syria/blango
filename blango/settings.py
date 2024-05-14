@@ -43,6 +43,7 @@ class Dev(Configuration):
     'django.contrib.staticfiles',
     'crispy_forms',
     'crispy_bootstrap5',
+    'debug_toolbar',
     'blog',
 
     ]
@@ -60,6 +61,7 @@ class Dev(Configuration):
         'django.contrib.auth.middleware.AuthenticationMiddleware',
         'django.contrib.messages.middleware.MessageMiddleware',
         #'django.middleware.clickjacking.XFrameOptionsMiddleware',
+        'debug_toolbar.middleware.DebugToolbarMiddleware',
     ]
 
     ROOT_URLCONF = 'blango.urls'
@@ -174,3 +176,4 @@ class Prod(Dev):
         "level": "DEBUG",
     },
 }
+INTERNAL_IPS = ["192.168.10.226"]
