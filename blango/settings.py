@@ -177,4 +177,7 @@ class Prod(Dev):
         "level": "DEBUG",
     },
 }
+
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+ACCOUNT_ACTIVATION_DAYS = 7
 INTERNAL_IPS = ["192.168.10.226"]
