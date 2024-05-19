@@ -44,6 +44,7 @@ class Dev(Configuration):
     'crispy_forms',
     'crispy_bootstrap5',
     'debug_toolbar',
+    'blango_auth',
     'blog',
 
     ]
@@ -96,7 +97,7 @@ class Dev(Configuration):
     ),
 }
 
-
+    AUTH_USER_MODEL = 'blango_auth.MyUser'
     # Password validation
     # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
